@@ -16,6 +16,8 @@ RubyRetriever (RR) uses asynchronous HTTP requests via [Eventmachine](https://gi
 
 **v1.4.0 Update (3/24/2016)** - Several bug fixes.
 
+**v1.4.1 Update (8/03/2021)** - Fixed TLS issue for CVE-2020-13482
+
 
 Mission  
 -------

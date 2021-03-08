@@ -245,7 +245,7 @@ module Retriever
         EM::Synchrony::FiberIterator.new(@link_stack, concurrency).each do |url|
           next if @already_crawled.size >= @max_pages
           next if @already_crawled.include?(url)
-          resp = EventMachine::HttpRequest.new(url).get
+          resp = EventMachine::HttpRequest.new(url, tls: {verify_peer: true}).get
           next unless good_response?(resp, url)
           current_page = page_from_response(url, resp.response)
           # non-link dependent modes
